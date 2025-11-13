@@ -1,0 +1,14 @@
+name: jenkins caller
+
+on: 
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  call-jenkins:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Trigger Jenkins Job
+        run: | 
+        curl -X POST "http://13.19.16.220:8080/job/GitClone/build?token=mytoken123"
