@@ -10,4 +10,7 @@ jobs:
     steps:
       - name: Trigger Jenkins Job
         run: |
-          curl -u Vignesh:1121201e9007d7026bf01877253aec6a13 http://13.60.66.220:8080//crumbIssuer/api/json
+          curl -u Vignesh:1121201e9007d7026bf01877253aec6a13 \
+           -H "Jenkins-Crumb: 468525d0bf27e928c4d2524907c7ab22a1f7c2d9dc2b0a7e12669fb4bcd56a6f" \
+           -X POST "http://13.19.16.220:8080/job/GitClone/build?token=mytoken123"
+
