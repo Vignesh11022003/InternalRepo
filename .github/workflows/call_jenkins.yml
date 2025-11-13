@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Trigger Jenkins Job
         run: |
-          curl -X POST http://13.60.66.220:8080//job/GitClone/build?token=mytoken123 --user Vignesh:vICKYVIGNESH@11
+          curl -u Vignesh:1121201e9007d7026bf01877253aec6a13 http://13.60.66.220:8080//crumbIssuer/api/json
